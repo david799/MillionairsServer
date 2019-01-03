@@ -13,14 +13,11 @@ public class QuestionServiceImpl implements QuestionService{
 
         Question question=new Question();
 
-        Connection conn = null;
-        Statement stmt = null;
-
         Class.forName("org.sqlite.JDBC");
 
         // stworzenie obiektu łączenia
-        conn = DriverManager.getConnection("jdbc:sqlite:/" + System.getProperty("user.dir") + "/src/main/resources/" + number + ".db");
-        stmt = conn.createStatement();
+        Connection conn = DriverManager.getConnection("jdbc:sqlite:/" + System.getProperty("user.dir") + "/src/main/resources/" + number + ".db");
+        Statement stmt = conn.createStatement();
         String sqlData = "SELECT COUNT(*) FROM questions";
         ResultSet rss = stmt.executeQuery(sqlData);
 
