@@ -5,9 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
-import java.io.IOException;
-import java.sql.*;
-
 
 @Configuration
 @EnableWebMvc
@@ -17,7 +14,7 @@ import java.sql.*;
 // spring boot application
 public class Application {
 
-    public static void main(String[] args) throws IOException, SQLException {
+    public static void main(String[] args){
 
         SpringApplication.run(Application.class, args);
 
